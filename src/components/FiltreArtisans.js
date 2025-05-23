@@ -8,6 +8,11 @@ import useFetchParam from "../hooks/useFetchParam";
 
 function FiltreArtisans() {
   const { categorie } = useParams();
+
+  const [specialiteChoisie, setSpecialiteChoisie] = useState("");
+  const [villeChoisie, setVilleChoisie] = useState("");
+  const [artisans, setArtisans] = useState([]);
+
   const { data: specialites } = useFetchParam(
     getSpecialitesByCategorie,
     categorie
@@ -16,10 +21,6 @@ function FiltreArtisans() {
     getVillesBySpecialite,
     specialiteChoisie
   );
-
-  const [specialiteChoisie, setSpecialiteChoisie] = useState("");
-  const [villeChoisie, setVilleChoisie] = useState("");
-  const [artisans, setArtisans] = useState([]);
 
   const handleRecherche = () => {
     if (specialiteChoisie && villeChoisie) {
