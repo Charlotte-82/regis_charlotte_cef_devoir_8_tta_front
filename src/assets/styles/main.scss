@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "GraphikFamily";
+  src: url("../fonts/GraphikFamilyTtf/Graphik-Regular-Trial.ttf")
+    format(‘truetype’);
+}
+
+@font-face {
+  font-family: "GraphikFamily";
+  font-weight: 700;
+  src: url("../fonts/GraphikFamilyTtf/Graphik-Bold-Trial.ttf")
+    format(‘truetype’);
+}
+
+@font-face {
+  font-family: "GraphikFamily";
+  font-weight: 500;
+  src: url("../fonts/GraphikFamilyTtf/Graphik-Semibold-Trial.ttf")
+    format(‘truetype’);
+}
+
+@font-face {
+  font-family: "GraphikFamily";
+  font-style: italic;
+  src: url("../fonts/GraphikFamilyTtf/Graphik-RegularItalic-Trial.ttf")
+    format(‘truetype’);
+}
+
+@import "./variables";
+@import "./mixins";
+@import "./global";

@@ -1,0 +1,320 @@
+// footer
+
+.footer {
+  background-color: $primary-color;
+}
+
+.logoFooter {
+  height: 5em;
+  margin-left: -25em;
+  @include mobile {
+    height: 3em;
+    margin-left: 0;
+  }
+}
+
+.imageFooter {
+  @include tablette {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.colonneAdresse {
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.titreFooter {
+  color: $light-color;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+}
+
+.contentFooter {
+  color: $light-color;
+  margin-bottom: 0.3em;
+  letter-spacing: 0.5em;
+  @include mobile {
+    font-size: small;
+    letter-spacing: 0.2em;
+  }
+}
+
+.hrFooter {
+  color: $light-color;
+  border: 1px solid $light-color;
+  margin-left: 15em;
+  margin-right: 15em;
+  opacity: 1;
+  @include mobile {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+.footerLink {
+  margin-right: 1em;
+  color: $light-color;
+  text-decoration: underline;
+  @include tablette {
+    font-size: smaller;
+  }
+  @include mobile {
+    margin-right: 0.5em;
+    font-size: xx-small;
+  }
+}
+
+// header
+
+.headerBox {
+  box-shadow: 1px 2px 10px 2px lightgrey;
+  margin-bottom: 1em;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  justify-content: space-between;
+  @include mobile {
+    justify-content: end;
+  }
+}
+
+.menuItem {
+  color: $tertiary-color;
+}
+
+.menuItem:hover {
+  color: $tertiary-color;
+}
+
+.architecte {
+  height: 10em;
+  margin: 1em;
+
+  @include tablette {
+    height: 7em;
+  }
+
+  @include mobile {
+    height: 5em;
+    display: block;
+    margin: auto;
+  }
+}
+
+.logo {
+  height: 10em;
+
+  @include tablette {
+    height: 7em;
+  }
+
+  @include mobile {
+    height: 5em;
+  }
+}
+
+.menu {
+  margin-top: 6em;
+
+  @include tablette {
+    margin-top: 0;
+    position: absolute;
+    top: 0em;
+  }
+
+  @include mobile {
+    margin-top: 0;
+    position: absolute;
+    top: 0em;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.iconeMenu {
+  width: 1em;
+  margin-right: 1em;
+}
+
+.headerDesktop {
+  justify-content: end;
+  @include mobile {
+    display: none;
+  }
+}
+
+.barre {
+  @include tablette {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+// Barre de recherche
+
+.inputRecherche {
+  outline-color: $primary-color;
+  flex: 1;
+  padding: 4px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-align: right;
+  width: 100%;
+}
+
+.boutonLoupe {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.imageLoupe {
+  color: $primary-color;
+  font-size: 1rem;
+}
+
+.barreDeRecherche {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  border-bottom: 1px solid $primary-color;
+  border-right: solid 1px $primary-color;
+  padding: 5px 8px;
+  width: 250px;
+  margin-bottom: 5px;
+
+  margin-top: 1em;
+
+  @include mobile {
+    max-width: 90%;
+    border: none;
+    position: absolute;
+    left: 8em;
+    top: 0.7em;
+    margin-top: 0;
+  }
+}
+
+// Formulaire
+
+.formulaireContact {
+  border: solid $primary-color 2px;
+  padding: 2em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.radioFormulaire {
+  margin-right: 0.5em;
+}
+
+// Top des artisans
+
+.topCard {
+  border: none;
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.card-img-top {
+  height: 15em;
+  object-fit: cover;
+  @include tablette {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.card-body {
+  @include mobile {
+    justify-items: start;
+  }
+}
+
+.divCard {
+  justify-content: space-around;
+  @include mobile {
+    justify-content: start;
+  }
+}
+.card-title {
+  text-align: right;
+  border-left: solid 1px $primary-color;
+  margin-left: 1em;
+  cursor: pointer;
+  @include tablette {
+    text-align: left;
+    padding-left: 1em;
+    margin-left: 0;
+  }
+  @include mobile {
+    padding-left: 1.5em;
+    margin-left: 1em;
+    text-align: left;
+    border-width: 2px;
+  }
+}
+
+.card-title:hover {
+  color: $hover-color;
+}
+
+.h4Text {
+  text-align: right;
+  font-size: small;
+  margin-left: 4.5em;
+  @include tablette {
+    display: none;
+  }
+}
+
+.topLien {
+  text-decoration: none;
+  @include tablette {
+    font-size: large;
+  }
+  @include mobile {
+    font-size: large;
+  }
+}
+
+.noteTop {
+  @include tablette {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.proposTop {
+  @include tablette {
+    font-size: small;
+  }
+  @include mobile {
+    display: none;
+  }
+}

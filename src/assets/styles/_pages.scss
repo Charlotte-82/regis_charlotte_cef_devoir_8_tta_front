@@ -1,0 +1,178 @@
+// home
+
+.lienChemin {
+  color: $primary-color;
+  text-decoration: none;
+  margin-left: 1em;
+
+  @include mobile {
+    font-size: smaller;
+  }
+}
+
+.boutonBasPage {
+  border: none;
+  background-color: $primary-color;
+  color: $light-color;
+  border-radius: 5px;
+  padding: 0.7em 2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: larger;
+
+  @include tablette {
+    font-size: large;
+    letter-spacing: 1px;
+  }
+
+  @include mobile {
+    padding: 0.5em 1em;
+    font-size: large;
+    letter-spacing: 1px;
+  }
+}
+
+.boutonBasPage:hover {
+  background-color: $secondary-color;
+}
+
+.lienBasPage {
+  text-decoration: none;
+  color: $light-color;
+}
+
+.boutonBasPageBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.imageAccueil {
+  width: 30%;
+  margin-right: 2em;
+
+  @include tablette {
+    width: 40%;
+    align-self: center;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.homeText {
+  margin-left: 5em;
+  @include tablette {
+    margin-left: 3em;
+  }
+  @include mobile {
+    margin-left: 2em;
+  }
+}
+
+.homeP {
+  font-size: larger;
+  margin-right: 5em;
+  font-weight: 500;
+  line-height: 1em;
+  @include tablette {
+    font-size: medium;
+  }
+  @include mobile {
+    font-size: medium;
+    margin-right: 1em;
+  }
+}
+
+// recherche
+
+.boutonRecherche {
+  border: none;
+  background-color: $primary-color;
+  color: $light-color;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: medium;
+  margin-bottom: 2em;
+  width: 10em;
+}
+
+.boutonRecherche:hover {
+  background-color: $secondary-color;
+  cursor: pointer;
+}
+
+.form-select {
+  background-color: $light-color;
+  border: solid 2px $tertiary-color;
+  margin-bottom: 1em;
+  width: 60%;
+}
+
+.resultatRecherche {
+  border-left: solid 1px $primary-color;
+  padding-left: 2em;
+}
+
+.imageRecherche {
+  width: 50%;
+  @include mobile {
+    display: none;
+  }
+}
+
+.zeroResultat {
+  visibility: hidden;
+}
+
+.blocResultat {
+  width: 50%;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+// Fiche de l'artisan
+
+.imageFiche {
+  height: 20em;
+}
+
+.colonneImage {
+  @include mobile {
+    display: none;
+  }
+}
+.colonneVille {
+  align-content: center;
+  margin-left: 0.7em;
+  @include mobile {
+    padding-left: 1em;
+    border-left: solid 2px $primary-color;
+  }
+}
+
+.titreFiche {
+  margin-left: 0.7em;
+  margin-top: 0.5em;
+}
+// Page des catégories
+
+.catCard {
+  width: 35%;
+  border: none;
+}
+
+// page en construction
+
+.page404 {
+  @include tablette {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
