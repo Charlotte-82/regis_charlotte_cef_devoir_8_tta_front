@@ -11,7 +11,7 @@ const useFetchParam = (apiFunction, param) => {
     setLoading(true);
     apiFunction(param)
       .then((res) => {
-        setData(res);
+        setData(res.data);
         setLoading(false);
       })
       .catch((err) => {
