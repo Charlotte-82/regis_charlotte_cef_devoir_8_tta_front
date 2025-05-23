@@ -60,11 +60,12 @@ function FiltreArtisans() {
             onChange={(e) => setSpecialiteChoisie(e.target.value)}
           >
             <option value=""></option>
-            {specialites.map((s) => (
-              <option key={s.Id_specialite} value={s.specialite_libelle}>
-                {s.specialite_libelle}
-              </option>
-            ))}
+            {Array.isArray(specialites) &&
+              specialites.map((s) => (
+                <option key={s.Id_specialite} value={s.specialite_libelle}>
+                  {s.specialite_libelle}
+                </option>
+              ))}
           </select>
 
           {/* Sélecteur de ville */}
@@ -77,11 +78,12 @@ function FiltreArtisans() {
             disabled={!specialiteChoisie}
           >
             <option value=""></option>
-            {villes.map((v) => (
-              <option key={v.Id_ville} value={v.ville_nom}>
-                {v.ville_nom}
-              </option>
-            ))}
+            {Array.isArray(villes) &&
+              villes.map((v) => (
+                <option key={v.Id_ville} value={v.ville_nom}>
+                  {v.ville_nom}
+                </option>
+              ))}
           </select>
 
           <button
