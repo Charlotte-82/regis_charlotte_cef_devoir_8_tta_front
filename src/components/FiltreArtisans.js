@@ -8,6 +8,7 @@ import useFetchParam from "../hooks/useFetchParam";
 
 function FiltreArtisans() {
   const { categorie } = useParams();
+  console.log("Categorie URL param:", categorie);
 
   const [specialiteChoisie, setSpecialiteChoisie] = useState("");
   const [villeChoisie, setVilleChoisie] = useState("");
