@@ -8,8 +8,8 @@ const useFetch = (apiFunction) => {
   useEffect(() => {
     apiFunction()
       .then((response) => {
-        setData(response.data);
-        setLoading(false);
+        console.log("Réponse API dans hook:", response);
+        setData(response.data.data);
       })
       .catch((err) => {
         setError(err);
