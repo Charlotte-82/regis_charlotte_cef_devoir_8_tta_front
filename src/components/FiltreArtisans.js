@@ -114,6 +114,7 @@ function FiltreArtisans() {
         {artisans.length === 0 ? (
           <p className="zeroResultat">Aucun artisan trouvé.</p>
         ) : (
+          Array.isArray(artisans) &&
           artisans.map((a) => (
             <div key={a.id_artisan}>
               <h5 className="resultatRecherche">{a.artisan_nom}</h5>
