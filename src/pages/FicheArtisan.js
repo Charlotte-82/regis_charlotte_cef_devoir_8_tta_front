@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import Chevron from "../assets/images/chevron-droit.png";
 import FormulaireContact from "../components/FormulaireContact";
 import { getArtisanById } from "../services/artisansServices";
-import useFetchParam from "../hooks/useFetchParam";
+import useFetchObject from "../hooks/useFetchObject";
 
 function FicheArtisan() {
   const { id } = useParams();
 
-  const { data: artisan, loading, error } = useFetchParam(getArtisanById, id);
+  const { data: artisan, loading, error } = useFetchObject(getArtisanById, id);
 
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur lors du chargement de l’artisan : {error}</p>;
