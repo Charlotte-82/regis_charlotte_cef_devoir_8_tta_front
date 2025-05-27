@@ -14,7 +14,7 @@ function TopArtisans() {
     <div className="container mt-1">
       <div className="row">
         {artisans.length > 0 ? (
-          artisans.map((a) => (
+          artisans.map((a, index) => (
             <div className="col-md-4 d-flex divCard" key={index}>
               <div className="card mb-4 topCard">
                 {a.image && (
