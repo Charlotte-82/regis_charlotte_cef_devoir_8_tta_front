@@ -14,14 +14,20 @@ function FiltreArtisans() {
   const [villeChoisie, setVilleChoisie] = useState("");
   const [artisans, setArtisans] = useState([]);
 
-  const { data: specialites } = useFetchParam(
-    getSpecialitesByCategorie,
-    categorie
-  );
-  const { data: villes } = useFetchParam(
-    getVillesBySpecialite,
-    specialiteChoisie
-  );
+  const {
+    data: specialites,
+    loading: loadingSpecialites,
+    error: errorSpecialites,
+  } = useFetchParam(getSpecialitesByCategorie, categorie);
+
+  const {
+    data: villes,
+    loading: loadingVilles,
+    error: errorVilles,
+  } = useFetchParam(getVillesBySpecialite, specialiteChoisie);
+
+  if (loadingSpecialites || loadingVilles) return <p>Chargement...</p>;
+  if (errorSpecialites || errorVilles) return <p>Erreur lors du chargement</p>;
 
   const handleRecherche = () => {
     if (specialiteChoisie && villeChoisie) {

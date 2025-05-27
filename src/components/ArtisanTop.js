@@ -13,8 +13,8 @@ function TopArtisans() {
   return (
     <div className="container mt-1">
       <div className="row">
-        {Array.isArray(artisans) && artisans.length > 0 ? (
-          artisans.map((a, index) => (
+        {artisans.length > 0 ? (
+          artisans.map((a) => (
             <div className="col-md-4 d-flex divCard" key={index}>
               <div className="card mb-4 topCard">
                 {a.image && (
