@@ -27,11 +27,15 @@ export const getArtisansTop = () => {
   return axios.get(`${ARTISANS_URL}/top`);
 };
 
-export const getArtisansFiltres = (specialite, ville) => {
-  return axios.get(`${ARTISANS_URL}/filtres`, {
-    params: {
-      specialite,
-      ville,
-    },
+return axios
+  .get(`${API_BASE_URL}/api/artisans/filtres`, {
+    params: { specialite, ville },
+  })
+  .then((res) => {
+    getArtisansFiltres(specialiteChoisie, villeChoisie).then((res) => {
+      console.log("Réponse brute filtres :", res);
+      // ...
+    });
+    const data = res.data;
+    return Array.isArray(data) ? data : data.artisans || [];
   });
-};
